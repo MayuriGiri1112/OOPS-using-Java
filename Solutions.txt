@@ -1,0 +1,306 @@
+//WAP to print "Hello World"
+
+public class HelloWorld 
+{
+  public static void main(String[] args) 
+  {
+    System.out.println("Hello World");
+  }
+}
+
+//WAP to print your name
+
+public class Name 
+{
+  public static void main(String[] args) 
+  {
+    System.out.println("Mayuri Giri");
+  }
+}
+
+//WAP to print user's name
+
+import java.util.Scanner;
+
+class UserName 
+{
+  public static void main(String[] args) 
+ {
+    Scanner myObj = new Scanner(System.in); 
+    System.out.println("Enter username : ");
+
+    String userName = myObj.nextLine();
+    System.out.println("Username is " + userName); 
+  }
+}
+
+//WAP to add two numbers
+
+import java.io.*;
+import java.util.Scanner;
+
+public class Sum 
+{
+  public static void main(String[] args) 
+{
+  	int num1, num2, sum;
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter number 1 : ");
+    num1 = s.nextInt();
+    System.out.println("Enter number 2 : ");
+    num2 = s.nextInt();
+    sum = num1+num2;
+    System.out.println("Sum of "+num1+" and "+num2+" is "+sum);
+  }
+}
+
+//WAP to find area of circle
+
+import java.io.*;
+import java.util.Scanner;
+
+public class AreaCircle 
+{
+  public static void main(String[] args) 
+ {
+    double pi=3.14;
+    double radius, area;
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter radius : ");
+    radius = s.nextDouble();
+    area = pi * radius * radius;
+    System.out.println("Area of circle is "+area);
+  }
+}
+
+
+//WAP to find area of regular polygon. Given number of sides n and length of each sides l
+
+
+import java.util.Scanner;
+
+public class AreaRegularPolygon 
+{
+   public static void main(String[] args) 
+  {
+      Scanner input = new Scanner(System.in);
+
+      System.out.print("Enter the number of sides: ");
+      int n = input.nextInt();
+
+      System.out.print("Enter the length of each side: ");
+      double s = input.nextDouble();
+
+      A = (n * s^2) / (4 * tan(pi/n))
+      double area = (n * Math.pow(s, 2)) / (4 * Math.tan(Math.PI / n));
+
+      System.out.println("The area of the regular polygon is " + area);
+   }
+}
+
+//WAP to initialize an array of integers of size n by two-digit random numbers then print the elements as 4 elements in one row (len in last row, if necessary).
+
+import java.util.Scanner;
+import java.util.Random;
+public class RandomNumberArray
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int n; 
+        System.out.print("Enter the length of array : ");
+        n = sc.nextInt();
+        int[] arr = new int[n]; 
+        Random rand = new Random(); 
+        for(int i = 0; i < n; i++) 
+        {
+            arr[i] = rand.nextInt(90) + 10; 
+        }
+        int count = 0;
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(arr[i] + " ");
+            count++;
+            if (count == 4) 
+            {
+                System.out.println();
+                count = 0;
+            }
+        }
+    }
+}
+
+//Using above code or otherwise search element x in above and print position of first occurence.
+
+import java.util.Scanner;
+import java.util.Random;
+public class SearchElementRandomNumberArray
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int n; 
+        System.out.print("Enter the length of array : ");
+        n = sc.nextInt();
+        int[] arr = new int[n]; 
+        Random rand = new Random(); 
+        for(int i = 0; i < n; i++) 
+        {
+            arr[i] = rand.nextInt(90) + 10; 
+        }
+        int count = 0;
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(arr[i] + " ");
+            count++;
+            if (count == 4) 
+            {
+                System.out.println();
+                count = 0;
+            }
+        }
+        System.out.println();
+
+        //Search
+        int x; 
+        System.out.print("Enter the element to be searched : ");
+        x = sc.nextInt();
+        int pos = -1;
+        for (int i = 0; i < n; i++) 
+       {
+            if (arr[i] == x) 
+           {
+                pos = i;
+                break;
+            }
+        }
+        if (pos != -1) 
+        {
+            System.out.println("The first occurrence of " + x + " is at position " + pos);
+        } 
+        else 
+        {
+            System.out.println(x + " is not found in the array");
+        }
+    }
+}
+
+//Using code 1 above or otherwise print first position where x occurs in two consecutive positions.
+
+import java.util.Scanner;
+import java.util.Random;
+public class FirstPosition
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int n; 
+        System.out.print("Enter the length of array : ");
+        n = sc.nextInt();
+        int[] arr = new int[n]; 
+        Random rand = new Random(); 
+        for(int i = 0; i < n; i++) 
+        {
+            arr[i] = rand.nextInt(20) + 10; 
+        }
+        int count = 0;
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(arr[i] + " ");
+            count++;
+            if (count == 4) 
+            {
+                System.out.println();
+                count = 0;
+            }
+        }
+        System.out.println();
+
+        //Search for x occurs in two consecutive positions
+        int x;
+        System.out.print("Enter the element to be searched : ");
+        x = sc.nextInt();
+        int pos = -1;
+        for (int i = 0; i < n - 1; i++) 
+       {
+            if (arr[i] == x && arr[i + 1] == x) 
+	  {
+                pos = i; 
+                break; 
+            }
+        }
+        if (pos != -1) 
+       {
+            System.out.println("The first position where " + x + " occurs in two consecutive positions is " + pos);
+        } 
+	else 
+	{
+            System.out.println(x + " does not occur in two consecutive positions in the array");
+        }
+
+    }
+}
+
+//Print position of nth occurence of x.
+
+import java.util.Scanner;
+import java.util.Random;
+public class nthOccurrence
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int n; 
+        System.out.print("Enter the length of array : ");
+        n = sc.nextInt();
+        int[] arr = new int[n]; 
+        Random rand = new Random(); 
+        for(int i = 0; i < n; i++) 
+        {
+            arr[i] = rand.nextInt(20) + 10; 
+        }
+        int count = 0;
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(arr[i] + " ");
+            count++;
+            if (count == 4) 
+            {
+                System.out.println();
+                count = 0;
+            }
+        }
+        System.out.println();
+
+        // find the position of the nth occurrence of x
+        int x;
+        int nth;
+        System.out.print("Enter the element to be searched : ");
+        x = sc.nextInt();
+        System.out.print("Enter the nth : ");
+        nth = sc.nextInt();
+        int c = 0; 
+        int pos = -1; 
+        for (int i = 0; i < n; i++) 
+       {
+            if (arr[i] == x) 
+            {
+                c++; 
+                if (c == nth) 
+                {
+                    pos = i; 
+                    break;
+                }
+            }
+        }
+        if (pos != -1) 
+        {
+            System.out.println("The position of the " + nth + "-th occurrence of " + x + " is " + pos);
+        } 
+        else 
+        {
+            System.out.println("The " + nth + "-th occurrence of " + x + " was not found in the array");
+        }
+
+    }
+}

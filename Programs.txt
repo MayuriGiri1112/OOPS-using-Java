@@ -1,0 +1,16 @@
+29/30/2023
+1. WAP to print "Hello World"
+2. WAP to print your name.
+3. WAP to print user's name.
+4. WAP to add two numbers.
+5. WAP to find area of circle taking radius as input from user.
+6. WAP to print area of a regular polygon given number of sides n and length of each sides l.
+
+05/04/2023
+1. WAP to initialize an array of integers of size n by two-digit random numbers then print the elements as 4 elements in one row (len in last row, if necessary).
+2. Using above code or otherwise search element x in above and print position of first occurence.
+3. Using code 1 above or otherwise print first position where x occurs in two consecutive positions.
+4. Print position of nth occurence of x.
+	11	12	13	14
+	15	16	17	18
+	19	20
